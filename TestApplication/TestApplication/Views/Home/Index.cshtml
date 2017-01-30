@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <button id="btnChangeColor" onclick="setColor()">ChangeBackgroundColor</button>
+</div>
+<script>
+    function setColor() {
+        var colors = ['red', 'pink', 'yellow', 'green', 'black', 'blue'], color;
+
+        var randColor;
+        do {
+            randColor = colors[Math.floor(Math.random() * colors.length)];
+        } while (color == randColor);
+        $('body').css('background-color', randColor);
+        document.getElementById('btnChangeColor').style.backgroundColor = randColor;
+    }
+</script>
+
