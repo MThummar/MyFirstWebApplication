@@ -12,6 +12,10 @@ namespace TestApplication.Controllers
         {
             return View();
         }
+        public ActionResult Index1()
+        {
+            return new FilePathResult("~/Views/Home/Index1.html", "text/html");
+        }
 
         public ActionResult About()
         {
