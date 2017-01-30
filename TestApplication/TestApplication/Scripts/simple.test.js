@@ -6,6 +6,8 @@
         randColor = colors[Math.floor(Math.random() * colors.length)];
     } while (color == randColor);
     document.body.style.backgroundColor = randColor;
-    this.style.backgroundColor = randColor;
+    document.getElementById("btnChangeColor").style.backgroundColor = randColor;
 
 }
+
+

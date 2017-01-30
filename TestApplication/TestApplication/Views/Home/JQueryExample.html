@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <meta charset="utf-8"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../../Scripts/simple.test.js"></script>
+    <link href="../../Content/bootstrap.css" rel="stylesheet" />
+    <script>
+        $(document).ready(function() {
+            $('p').click(function() {
+                $(this).hide();
+            });
+
+            $('#hidePTAG').click(function() {
+                $('p').hide();
+            });
+
+            $('#btnChangeColor').click(function() {
+                setColor();
+            });
+
+            $('#showPTAG').click(function() {
+                $('p').show();
+            });
+
+            $('#expand').click(function() {
+                $('#panel').slideToggle('slow');
+            });
+
+            $('#panel').click(function() {
+                $('#panel').slideUp('slow');
+            });
+
+            $('#btnFun').click(function() {
+                $('p').css("color","red").slideUp(2000).slideDown(2000);
+            });
+        });
+    </script>
+    <style>
+        #expand, #panel {
+            background-color: gainsboro;
+            text-align: center;
+            padding: 5px;
+            font-family: cursive;
+            font-size: 12px;
+            border: black;
+
+        }
+        #panel {
+            padding: 50px;
+            display: none;
+        }
+         
+    </style>
+
+
+</head>
+<body>
+<div class="jumbotron">
+    <div id="expand"> <h1>MyFirstWebApplication </h1> </div>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p>This is a paragraph1.</p>
+    <p>This is a paragraph2.</p>
+    <p>This is a paragraph3.</p>
+
+    <button id="btnChangeColor">ChangeBackgroundColor</button>
+    <button id="hidePTAG">HideParagraph</button>
+    <button id="showPTAG">ShowParagraph</button>
+
+    <button id="btnFun">Click me</button>
+
+
+</div>
+</body>
+</html>

@@ -12,9 +12,17 @@ namespace TestApplication.Controllers
         {
             return View();
         }
-        public ActionResult Index1()
+        public ActionResult JavaScript()
         {
-            return new FilePathResult("~/Views/Home/Index1.html", "text/html");
+            return new FilePathResult("~/Views/Home/JavaScriptExample.html", "text/html");
+        }
+        public ActionResult JQuery()
+        {
+            return new FilePathResult("~/Views/Home/JQueryExample.html", "text/html");
+        }
+        public ActionResult Css()
+        {
+            return new FilePathResult("~/Views/Home/CSSExample.html", "text/html");
         }
 
         public ActionResult About()
