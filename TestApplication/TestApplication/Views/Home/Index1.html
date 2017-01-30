@@ -7,6 +7,10 @@
     <script src="../../Scripts/simple.test.js"></script>
     <script>
         $(document).ready(function() {
+            $('p').click(function() {
+                $(this).hide();
+            });
+
             $('#hidePTAG').click(function() {
                 $('p').hide();
             });
@@ -18,8 +22,33 @@
             $('#showPTAG').click(function() {
                 $('p').show();
             });
+
+            $('#expand').click(function() {
+                $('#panel').slideToggle('slow');
+            });
+
+            $('#panel').click(function() {
+                $('#panel').slideUp('slow');
+            });
         });
     </script>
+    <style>
+        #expand, #panel {
+            background-color: blueviolet;
+            text-align: center;
+            padding: 5px;
+            font-family: cursive;
+            font-size: 12px;
+            border: brown;
+
+        }
+        #panel {
+            padding: 50px;
+            display: none;
+        }
+         
+    </style>
+
 
 </head>
 <body>
@@ -27,7 +56,10 @@
     <h1>ASP.NET</h1>
     <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
     <p>This is a paragraph.</p>
-    <p>This is another paragraph.</p>
+    
+    <div id="expand"> Click Me </div>
+    <div id ="panel">This is another paragraph.</div>
+
     <button id="btnChangeColor">ChangeBackgroundColor</button>
     <button id="hidePTAG">HideParagraph</button>
     <button id="showPTAG">ShowParagraph</button>
